@@ -1,0 +1,58 @@
+:root {
+  --font-family: "Poppins", "Inter", system-ui, sans-serif;
+  --text-color: #0b2545;
+  --bg-gradient: linear-gradient(135deg, #dbeafe, #f0f9ff);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: var(--bg-gradient);
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* text stays at top */
+  padding-top: 120px;
+}
+
+/* 🌟 Stylish text container */
+.type-area {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text-color);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  max-width: 800px;
+  line-height: 1.6;
+  animation: fadeIn 1.5s ease;
+}
+
+/* ✨ Subtle fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsive text size */
+@media (max-width: 600px) {
+  .type-area {
+    font-size: 20px;
+    padding: 15px 20px;
+  }
+}
